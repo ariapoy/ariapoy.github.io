@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aria's Memo - Striving To Live Like A Human.</title><meta name="author" content="Po-Yi Lu (呂栢頤)"><meta name="copyright" content="Po-Yi Lu (呂栢頤)"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="水星貓的筆記">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aria&#39;s Memo">
+<meta property="og:url" content="https://ariapoy.github.io/blog/index.html">
+<meta property="og:site_name" content="Aria&#39;s Memo">
+<meta property="og:description" content="水星貓的筆記">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ariapoy.github.io/img/avatar.png">
+<meta property="article:author" content="Po-Yi Lu (呂栢頤)">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ariapoy.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://ariapoy.github.io/blog/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-11-23 01:35:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/talks"><i class="fa-fw fas fa-file-powerpoint"></i><span> Talks</span></a></div><div class="menus_item"><a class="site-page" href="/projects"><i class="fa-fw fas fa-terminal"></i><span> Porjects</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Blog</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog"><i class="fa-fw fas fa-blog"></i><span> Blog</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Aria's Memo</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/talks"><i class="fa-fw fas fa-file-powerpoint"></i><span> Talks</span></a></div><div class="menus_item"><a class="site-page" href="/projects"><i class="fa-fw fas fa-terminal"></i><span> Porjects</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Blog</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog"><i class="fa-fw fas fa-blog"></i><span> Blog</span></a></li><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Aria's Memo</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://www.linkedin.com/in/lu-poyi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a class="social-icon" href="mailto:ariapoy@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/ariapoy" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/23/research-proposal/" title="Finding Ground Truth from Bias Label and Uncertain Annotator">     <img class="post_bg" src="/img/cover_life.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Finding Ground Truth from Bias Label and Uncertain Annotator"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/23/research-proposal/" title="Finding Ground Truth from Bias Label and Uncertain Annotator">Finding Ground Truth from Bias Label and Uncertain Annotator</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-11-22T17:22:48.000Z" title="Created 2020-11-23 01:22:48">2020-11-23</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/22/hello-world/" title="My First Post (Chinese)">     <img class="post_bg" src="/img/cover_life.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="My First Post (Chinese)"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/22/hello-world/" title="My First Post (Chinese)">My First Post (Chinese)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-11-22T14:24:49.762Z" title="Created 2020-11-22 22:24:49">2020-11-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Life/">Life</a></span></div><div class="content">既然下定決心唸博士了，那來寫點開站的想法吧！
+本篇是個人心情的抒發，如果想更瞭解我的專業背景可參考 About、CV，比較正式（八股）的博士班就學動機 (Statement of Purpose) 可參考 就學動機 Statement of Purpose。
+Why Ph. D.? Why Now?主要是受到幾位老師與朋友的啟發吧！
+
+小傑老師
+錳坤老師
+桂惠老師
+軒田老師
+李琳山老師
+
+唸博士的理由百百種，我單純是希望可以成為可以分享知識幫助需要的人—這樣的大人而已，五年的工作讓我覺得自己離這個目標越來越遠，想說就放手一搏朝著教育的路邁進吧！
+會停滯不前的主因是沒有自信，雖然家人、朋友與同事覺得我的個性適合教學，但在工作上與感情上的挫折帶來不少低潮，我無法在工作上面獲得「幫助他人」的成就感，同時無法管理自己的生活，無法好好地與重要的人溝通。所以在 28 歲時，我想我失去了一切，而渾噩過活也對所愛的人與支持我的人造成不少傷害。
+在親朋好友的鼓勵下重新振作，然而在這樣的情況下，父母與哥哥仍然願意體諒我的任性，而我一生的摯友們—彰郎、佳霖、耀文、敬餘、南瑾、東錦、Will、小畢、大瑋、承翰 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Po-Yi Lu (呂栢頤)</div><div class="author-info__description">水星貓的筆記</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ariapoy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.linkedin.com/in/lu-poyi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a class="social-icon" href="mailto:ariapoy@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/ariapoy" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">New to Ph. D.</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/23/research-proposal/" title="Finding Ground Truth from Bias Label and Uncertain Annotator"><img src="/img/cover_life.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Finding Ground Truth from Bias Label and Uncertain Annotator"/></a><div class="content"><a class="title" href="/2020/11/23/research-proposal/" title="Finding Ground Truth from Bias Label and Uncertain Annotator">Finding Ground Truth from Bias Label and Uncertain Annotator</a><time datetime="2020-11-22T17:23:56.426Z" title="Updated 2020-11-23 01:23:56">2020-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/22/hello-world/" title="My First Post (Chinese)"><img src="/img/cover_life.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="My First Post (Chinese)"/></a><div class="content"><a class="title" href="/2020/11/22/hello-world/" title="My First Post (Chinese)">My First Post (Chinese)</a><time datetime="2020-11-22T14:24:49.762Z" title="Updated 2020-11-22 22:24:49">2020-11-22</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Life/"><span class="card-category-list-name">Life</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Ph-D/" style="font-size: 1.1em; color: rgb(134, 62, 64)">Ph. D.</a><a href="/tags/SOP/" style="font-size: 1.1em; color: rgb(15, 20, 131)">SOP</a><a href="/tags/Blog/" style="font-size: 1.1em; color: rgb(71, 149, 73)">Blog</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">November 2020</span><span class="card-archive-list-count">2</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-11-22T17:35:07.806Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Po-Yi Lu (呂栢頤)</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://ariapoy.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "More challenge mistakes and joy,多挑戰，多犯錯，多分享成功的喜悅".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = 'More challenge mistakes and joy'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script></div></div></body></html>
