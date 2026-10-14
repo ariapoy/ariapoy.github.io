@@ -161,6 +161,14 @@ span.highlight {
   margin-top: 32px;
 }
 
+.publication {
+  background-color: #ffffff;
+}
+
+.publication:nth-of-type(odd) {
+  background-color: #fafa0050;
+}
+
 .page li {
   margin-bottom: 6px;
 }
