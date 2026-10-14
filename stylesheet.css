@@ -105,6 +105,7 @@ h2 {
 .name {
   padding-top: 20px;
   margin: 0;
+  font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
@@ -132,4 +133,69 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+}
+
+.profile-bio {
+  padding: 2.5%;
+  width: 63%;
+  vertical-align: middle;
+}
+
+.profile-photo {
+  padding: 2.5%;
+  width: 37%;
+}
+
+.page section {
+  margin-top: 32px;
+}
+
+.page li {
+  margin-bottom: 6px;
+}
+
+.page footer {
+  margin-top: 32px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 0 12px;
+  }
+
+  .profile,
+  .profile tbody,
+  .profile tr,
+  .profile td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .profile-photo {
+    text-align: center;
+  }
+
+  .profile-photo img {
+    max-width: 220px !important;
+  }
+
+  .page section {
+    overflow-wrap: break-word;
+  }
+
+  .page ul {
+    padding-left: 22px;
+  }
 }
